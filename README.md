@@ -49,16 +49,16 @@ M3G is not a loosely defined interchange format; it is a **strict runtime format
 
 ---
 
-## Technical Highlights (Why This Works)
+## Technical Highlights
 
 This exporter explicitly implements the parts of JSR-184 that historically caused incompatibilities:
 
 - **Matrix layout:** M3G uses row-major matrices, not OpenGL-style column-major
 - **Axis conversion:** Blender Z-up → M3G Y-up via a global −90° X rotation
 - **Strict file structure:** Header + content sections + Adler32 checksums
-- **Version targeting:** Defaults to M3G 1.0 for maximum compatibility; switches to M3G 1.1 only when Fog is explicitly enabled
+- **Version targeting:** Defaults to M3G 1.0 for maximum compatibility; switches to M3G 1.1 only when Fog is explicitly enabled  
 
-If Suzanne renders correctly in a real M3G viewer, implement it confidently in your Java environment.
+If Suzanne renders correctly in a real M3G viewer, the exported file is suitable for integration into a Java ME runtime.
 
 ---
 
@@ -80,7 +80,7 @@ If Suzanne renders correctly in a real M3G viewer, implement it confidently in y
 2. Ensure transforms, hierarchy, and shading are intentional
 3. Add lights (required for visible materials)
 4. (Optional) Enable Fog if targeting M3G 1.1
-5. Export to `.m3g`
+5. Export to `.m3g` or `.java`
 6. Validate using an M3G viewer or runtime
 
 ---
@@ -105,6 +105,7 @@ This is a first public release. Some features are intentionally conservative.
 - Vertex colors supported but not yet default
 - Shape keys / MorphingMesh planned, not complete
 - Skeletal animation export is functional but still expanding
+- Fog export (v.1.1) is only visible from a Java environment.
 
 All limitations are documented in code and tracked for future releases.
 
