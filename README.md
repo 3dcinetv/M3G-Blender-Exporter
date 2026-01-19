@@ -25,13 +25,7 @@ It explicitly solves the three historically fatal M3G problems that caused most 
 - Correct coordinate system conversion (Blender Z-up → M3G Y-up, applied consistently)
 - Correct file structure with header, content sections, and Adler32 checksums
 
----
-
-## Why M3G Is Unusual — and Why This Exists in 2026
-
 M3G is not a loosely defined interchange format; it is a **strict runtime format** with precise binary and semantic requirements. Many past attempts treated it as a visual export problem rather than a runtime contract, leading to files that loaded inconsistently—or not at all—on real devices.
-
-This exporter exists to make M3G behave correctly again: not just to export meshes, but to generate assets that survive real runtime execution, validation tools, and downstream conversion pipelines used historically in production.
 
 ---
 
@@ -64,7 +58,7 @@ This exporter explicitly implements the parts of JSR-184 that historically cause
 - **Strict file structure:** Header + content sections + Adler32 checksums
 - **Version targeting:** Defaults to M3G 1.0 for maximum compatibility; switches to M3G 1.1 only when Fog is explicitly enabled
 
-If Suzanne renders correctly in a real M3G viewer, the exporter is doing its job.
+If Suzanne renders correctly in a real M3G viewer, implement it confidently in your Java environment.
 
 ---
 
@@ -98,7 +92,7 @@ This exporter has been verified against real M3G execution environments:
 - M3G Viewer 0.3 by WizzWorks
 - M3G Viewer by HiCorp
 
-If it works in these, it works.
+If it works in these, your file is ready for J2ME environment.
 
 ---
 
