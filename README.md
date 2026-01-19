@@ -15,7 +15,7 @@ This add-on was developed to reestablish a missing production link between moder
 
 ---
 
-## Blender .m3g .java 1.0 - 1.1 Addon.
+## Blender .M3G .java 1.0 - 1.1 Addon.
 
 This exporter generates **byte-accurate, JSR-184–compliant `.m3g` files** directly from Blender 3.6+ scenes. It translates Blender scene data into the M3G object model with explicit handling of transform hierarchies, vertex buffers, materials, lights, animations, and file structure, producing assets that behave correctly in real M3G runtimes and viewers rather than relying on visual approximation.
 
