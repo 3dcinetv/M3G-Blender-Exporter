@@ -9,6 +9,8 @@ As videogame production pipelines scaled, `.m3g` served as a core intermediate 3
 [Official JSR-184 Mobile 3D Graphics API documentation](https://nikita36078.github.io/J2ME_Docs/docs/jsr184/)  
 [JSR-184 byte layout and ObjectType ID structure](https://www.j2megame.org/j2meapi/JSR_184_Mobile_3D_Graphics_API_1_1/file-format.html#Fog)
 
+![M3G Export Preview](Screenshots/M3G_Export_Preview.png)
+
 ## Overview
 
 This add-on was developed to reestablish a missing production link between modern 3D authoring tools and the JSR-184 (`.m3g`) mobile 3D runtime format, enabling Blender to function as a precise authoring environment for legacy and preservation-oriented mobile graphics pipelines. It is intended for developers, retro modders, and 3D technical artists who require direct control over scene graphs, transforms, materials, and binary layout when targeting Java ME–based runtimes, emulators, and historical toolchains. The exporter follows a clean separation of concerns and respects JSR-184 object graph semantics instead of attempting to force Blender abstractions into the format, avoiding the historically common failure modes that rendered most earlier M3G exporters unusable in real runtimes. Artistically, it treats early mobile 3D constraints—limited lighting models, strict resource budgets, and simplified scene semantics—as intentional design parameters rather than limitations, enabling accurate reconstruction and extension of mobile-era 3D content. For more details on the differences between .M3G version _1.0 and 1.1_, please scroll to the end of this page.
@@ -67,11 +69,12 @@ If Suzanne renders correctly in a real M3G viewer, the exported file is suitable
 1. Download or clone this repository
 2. In Blender:
    - Edit → Preferences → Add-ons → Install
-   - Select `m3g_exporter_2026_v2.py`
+   - Select `m3g_exporter_v1_x.py`
    - Enable **M3G Blender Exporter**
 3. Export via:
    - File → Export → M3G (`.m3g`, `.java`)
 
+![M3G Export Preview](Screenshots/installing_m3g.png)
 ---
 
 ## Export Workflow
