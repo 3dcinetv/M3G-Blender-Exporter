@@ -6,9 +6,9 @@ JSR-184 `.m3g` specification was approved by the Java Community Process (JCP) in
 As videogame production pipelines scaled, `.m3g` served as a core intermediate 3D representation rather than a final shipping asset, leading in late 2005 to the introduction of `.mtra` and `.btrac` formats associated with Micro3D v3, which preserved M3G semantics while enabling precompiled model and animation data. This evolution culminated around 2009 with the `.h3t` container (Micro3D v4), formalized under JSR-194, where M3G concepts were compiled into a fixed runtime asset format with scene data and animations resolved during conversion for execution across supported devices.
 
 [Official Java Community Process page for JSR-184 Mobile 3D Graphics API](https://jcp.org/en/jsr/detail?id=184)  
-[Official JSR-184 Mobile 3D Graphics API documentation](https://nikita36078.github.io/J2ME_Docs/docs/jsr184/)  
-[JSR-184 byte layout and ObjectType ID structure](https://www.j2megame.org/j2meapi/JSR_184_Mobile_3D_Graphics_API_1_1/file-format.html#Fog) 
-[3D/J2ME Video Game examples](https://youtu.be/bMm_wB7fJXk?si=xWzr94dA7wxjulIq)  
+📘 [Official JSR-184 Mobile 3D Graphics API documentation](https://nikita36078.github.io/J2ME_Docs/docs/jsr184/)  
+[JSR-184 byte layout and ObjectType ID structure](https://www.j2megame.org/j2meapi/JSR_184_Mobile_3D_Graphics_API_1_1/file-format.html#Fog)  
+🎮 [3D/J2ME Video Game examples](https://youtu.be/bMm_wB7fJXk?si=xWzr94dA7wxjulIq)  
 
 ![M3G Export Preview](Screenshots/M3G_Export_Preview.png)
 *Preview of a `.m3g` file exported from Blender and rendered in a real M3G viewer.*
