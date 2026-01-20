@@ -11,7 +11,7 @@ As videogame production pipelines scaled, `.m3g` served as a core intermediate 3
 
 ## Overview
 
-This add-on was developed to reestablish a missing production link between modern 3D authoring tools and the JSR-184 (`.m3g`) mobile 3D runtime format, enabling Blender to function as a precise authoring environment for legacy and preservation-oriented mobile graphics pipelines. It is intended for developers, retro modders, and 3D technical artists who require direct control over scene graphs, transforms, materials, and binary layout when targeting Java ME–based runtimes, emulators, and historical toolchains. The exporter follows a clean separation of concerns and respects JSR-184 object graph semantics instead of attempting to force Blender abstractions into the format, avoiding the historically common failure modes that rendered most earlier M3G exporters unusable in real runtimes. Artistically, it treats early mobile 3D constraints—limited lighting models, strict resource budgets, and simplified scene semantics—as intentional design parameters rather than limitations, enabling accurate reconstruction and extension of mobile-era 3D content.
+This add-on was developed to reestablish a missing production link between modern 3D authoring tools and the JSR-184 (`.m3g`) mobile 3D runtime format, enabling Blender to function as a precise authoring environment for legacy and preservation-oriented mobile graphics pipelines. It is intended for developers, retro modders, and 3D technical artists who require direct control over scene graphs, transforms, materials, and binary layout when targeting Java ME–based runtimes, emulators, and historical toolchains. The exporter follows a clean separation of concerns and respects JSR-184 object graph semantics instead of attempting to force Blender abstractions into the format, avoiding the historically common failure modes that rendered most earlier M3G exporters unusable in real runtimes. Artistically, it treats early mobile 3D constraints—limited lighting models, strict resource budgets, and simplified scene semantics—as intentional design parameters rather than limitations, enabling accurate reconstruction and extension of mobile-era 3D content. For more details on the differences between .M3G version _1.0 and 1.1_, please scroll to the end of this page.
 
 ---
 
@@ -139,6 +139,34 @@ Planned next steps:
 Contributions and testing feedback are welcome.
 
 ---
+
+### Historic M3G Version Differences (JSR-184) from Version 1.0 to 1.1
+
+#### New Features
+- The Loader now supports all PNG color types and bit depths.
+- The Node alpha factor now affects `Sprite3D`.
+- Additional getter methods were added to allow all properties to be queried.
+- The `OVERWRITE` hint flag was added to `Graphics3D.bindTarget`.
+
+#### Removed or Relaxed Exceptions
+- `Object3D.removeAnimationTrack` no longer throws `NullPointerException`.
+- `Graphics3D.releaseTarget` no longer throws `IllegalStateException`.
+- Several deferred exception cases were removed from `VertexBuffer`.
+- The maximum target surface and viewport are no longer required to be square.
+- `Group.addChild` no longer throws an exception if the `Node` is already a child of the `Group`.
+
+#### New or Tightened Exceptions
+- Target surfaces larger than the maximum viewport are no longer permitted in `Graphics3D`.
+
+#### Resolved Interoperability Issues
+- The default projection matrix is now required to be the identity matrix with projection type `GENERIC`.
+- The Loader must treat all file names as case-sensitive.
+- Mutable MIDP images are treated as RGB; immutable images are treated as RGBA.
+- Flipping the sign of a quaternion during interpolation is explicitly disallowed.
+- Downscaling behavior for sprite and background images is now well specified.
+- The role of the crop rectangle when scaling sprites has been clarified.
+
+
 
 ## Historical Context
 
