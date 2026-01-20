@@ -7,7 +7,8 @@ As videogame production pipelines scaled, `.m3g` served as a core intermediate 3
 
 [Official Java Community Process page for JSR-184 Mobile 3D Graphics API](https://jcp.org/en/jsr/detail?id=184)  
 [Official JSR-184 Mobile 3D Graphics API documentation](https://nikita36078.github.io/J2ME_Docs/docs/jsr184/)  
-[JSR-184 byte layout and ObjectType ID structure](https://www.j2megame.org/j2meapi/JSR_184_Mobile_3D_Graphics_API_1_1/file-format.html#Fog)
+[JSR-184 byte layout and ObjectType ID structure](https://www.j2megame.org/j2meapi/JSR_184_Mobile_3D_Graphics_API_1_1/file-format.html#Fog) 
+[3D/J2ME Video Game examples](https://youtu.be/bMm_wB7fJXk?si=xWzr94dA7wxjulIq)  
 
 ![M3G Export Preview](Screenshots/M3G_Export_Preview.png)
 *Preview of a `.m3g` file exported from Blender and rendered in a real M3G viewer.*
