@@ -10,6 +10,7 @@ As videogame production pipelines scaled, `.m3g` served as a core intermediate 3
 [JSR-184 byte layout and ObjectType ID structure](https://www.j2megame.org/j2meapi/JSR_184_Mobile_3D_Graphics_API_1_1/file-format.html#Fog)
 
 ![M3G Export Preview](Screenshots/M3G_Export_Preview.png)
+*Preview of a `.m3g` file exported from Blender and rendered in a real M3G viewer.*
 
 ## Overview
 
