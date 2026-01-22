@@ -85,10 +85,17 @@ If Suzanne renders correctly in a real M3G viewer, the exported file is suitable
 
 1. Create or load a Blender scene
 2. Ensure transforms, hierarchy, and shading are intentional
-3. Add lights (required for visible materials)
-4. (Optional) Enable Fog if targeting M3G 1.1
-5. Export to `.m3g` or `.java`
-6. Validate using an M3G viewer or runtime
+3. A Camera must exist in the scene to correctly export the .m3g
+4. Add and position a point light (required for visible materials)
+5. Assign a BSDF material (the diffuse slot color).
+6. You can add simple 128x128 texture into the diffuse color of the BSDF
+7. (Optional) Enable Fog if targeting M3G 1.1 _this is still experimental_
+8. Export to `.m3g` or `.java`
+9. Validate using an M3G viewer or runtime
+
+[![M3G Demo Video](https://img.youtube.com/vi/g_mJ5AsDgts/0.jpg)](https://youtu.be/g_mJ5AsDgts)  
+*_click the above image to play the demo video_*
+
 
 ---
 
