@@ -142,6 +142,8 @@ All limitations are documented in code and tracked for future releases.
 ---
 
 ## Roadmap
+THIS ADDON IS STILL IN DEVELOPMENT.
+THIS REPO IS 17 versions BEHIND MY LOCAL DEVELOPMENT.
 
 Planned next steps:
 
