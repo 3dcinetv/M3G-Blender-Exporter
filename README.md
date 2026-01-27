@@ -198,6 +198,40 @@ This exporter:
 Post-2006 production pipelines often used H3T (Micro3D v4) as a master format, with `.m3g` generated as a compatibility output via conversion tools. This exporter targets the last open, inspectable stage of that pipeline.
 
 ---
+## ONGOING DEVELOPMENT (will be published soon)  
+Summary of All Implementations for M3G Exporter v1.3.3  
+
+A. VERSION & DOCUMENTATION UPDATES
+
+Version bump: 1.3.2 → 1.3.3
+Version history: Add JSR-184 Spec Compliance notes referencing 3DS Max documentation
+Compatibility notes referencing 2004 original .m3g exporters from other DCCs (Metasequoia, 3DsMax)
+Camera + Light is always required to comply with Scene validation.
+Fog attachment comment: Document that fog must be attached to Appearance objects to be visible.
+
+B. SPEC COMPLIANCE FEATURES (Already Working - Will Verify/Document)
+
+Default mesh color: 0xFFFFFFFF (white) in M3GVertexBuffer - already correct
+vertexColorTrackingEnabled: Set to True when vertex colors present - already implemented
+MODULATE blending: Default texture blending mode (227) - already correct
+Vertex color + texture interaction: Texture modulated by vertex colors - already working
+
+C. VERTEX COLOR FIXES (Already Implemented in v19-2)
+
+Vertex color matching in translateFaces(): Duplicates vertices at color boundaries
+Per-face-corner color handling: Blender stores per-loop, M3G stores per-vertex
+Alpha channel support: 3 components (RGB) or 4 components (RGBA) based on alpha detection
+
+D. DEBUG OUTPUT REORGANIZATION  
+
+[BYTE] - Binary/hex level operations (file writing, section building)
+[WORLD] - World, Background, Groups, scene hierarchy
+[MESH] - Mesh translation, materials, vertex colors, fog property attachment
+[LIGHT] - Light translation, intensity, attenuation, color
+
+----------
+
+
 
 ## License
 
