@@ -255,4 +255,5 @@ Credits
 Blender 3.6 port & enhancements: Pierre Schiller  
 JSR-184 Specification: Nokia Corporation, Java Community Process  
 Research assistance: Claude (Anthropic), Gemini, Qwen, Chat GPT  
-Inspired by the Blender 2.49 .py script by Gerhard Völkl (2005-2008)
+Inspired by the Blender 2.49 .py script by Gerhard Völkl (2005-2008)  
+PS1 graphic aesthetics and [technical considerations](https://www.david-colson.com/2021/11/30/ps1-style-renderer.html)
