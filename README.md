@@ -93,7 +93,7 @@ If Suzanne renders correctly in a real M3G viewer, the exported file is suitable
 8. Export to `.m3g` or `.java`
 9. Validate using an M3G viewer or runtime
 
-[![M3G Demo Video](https://img.youtube.com/vi/g_mJ5AsDgts/0.jpg)](https://youtu.be/g_mJ5AsDgts)  
+[![M3G Demo Video](Screenshots/videodemo.png)](https://youtu.be/g_mJ5AsDgts)  
 *_click the above image to play the demo video_*
 
 
