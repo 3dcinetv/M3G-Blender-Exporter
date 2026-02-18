@@ -89,7 +89,7 @@ If Suzanne renders correctly in a real M3G viewer, the exported file is suitable
 4. Add and position a point light (required for visible materials)
 5. Assign a BSDF material (the diffuse slot color).
 6. You can add simple 128x128 texture into the diffuse color of the BSDF
-7. (Optional) Enable Fog if targeting M3G 1.1 _(This works only from .java code)_
+7. Fog parameters need World>Mist pass "start and depth", (quadratic/linear) values.
 8. Export to `.m3g` or `.java`
 9. Validate using an M3G viewer or runtime
 
@@ -115,11 +115,11 @@ If it works in these, your file is ready for J2ME environment.
 This is a first public release. Some features are intentionally conservative.
 
 - Materials require at least one Light to be visible (JSR-184 behavior)
-- Textures and UVs are under active development
-- Vertex colors supported but not yet default
-- Shape keys / MorphingMesh planned, not complete
-- Skeletal animation export is functional but still expanding
-- Fog export (v.1.1) is only visible from a Java environment.
+- ~~Textures and UVs are under active development~~ Done
+- ~~Vertex colors supported but not yet default~~ Done
+- ~~Shape keys / MorphingMesh planned, not complete~~ Completed
+- ~~Skeletal animation export mesh deformation / blendshapes~~ Completed
+- Fog viewing in Blender requires Compositor. But only World>Mist>start/depth values are sent to .m3g
 
 All limitations are documented in code and tracked for future releases.
 
