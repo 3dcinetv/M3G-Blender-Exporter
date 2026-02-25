@@ -49,10 +49,12 @@ M3G is not a loosely defined interchange format; it is a **strict runtime format
 - Correct matrix layout (row-major, translation at indices 3 / 7 / 11)
 - Correct coordinate system (right-handed, Y-up, −Z forward)
 - Scene hierarchy export (World → Groups → Nodes)
+- World color or with texture node connected, will directly translate to Background color/Texture fixed in the background.
 - FOG (from near / far camera plane) / Mist world pass settings for Linear/Quadratic falloff
 - Cameras (Near / far planes, FOV, Perspective)
-- Lights (Ambient, Directional, Omni, Spot)
-- Materials (Diffuse, Roughness(_Shininess_), Specular, Emissive, Alpha)
+- Lights (Ambient, Sun _Directional_, Point _Omni_, Spot) / Intensity and Color can be animated
+- ambientLight / foglight <---hardcoded names, can have custom properties to override scene's Ambient and Fog Light
+- Materials (Diffuse, Roughness(_Shininess_), Specular, Emissive, Alpha) correct translation from BSDF node
 - BSDF Material options (Alpha clip, Alpha blend, Opaque) supported (_aka: Compositing Mode_)
 - Visibility animation from Blender (but must code it in .java to trigger)
 - Vertex buffers, normals, triangle strips
