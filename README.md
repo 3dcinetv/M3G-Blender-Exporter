@@ -1,4 +1,7 @@
 
+# 🟢THE FULL ADDON IS AVAILABLE ON PATREON.COM/3DCINETV NOW #
+## ⚠_THE CURRENT REPO WILL BE UPDATED WITH THE FULL ADDON AFTER MARCH 15th_ ##
+
 # JSR-184 M3G Format
 ## Brief Evolution History (2003–2009)
 JSR-184 `.m3g` specification was approved by the Java Community Process (JCP) in November 2003. It was introduced as the first standardized mobile 3D runtime format (_v1.0_) for J2ME (Java)-driven mobile phone devices, providing a retained-mode scene graph, animation system, binary asset specification for mobile devices with differing hardware implementations, including those produced by Nokia (Symbian SDK) and Sony Ericsson (SE SDK). Through 2005, the .M3G format expanded with additional features (_v1.1_, including fog and depth). HiCorp (JP) implemented Mascot Capsule as a reference JSR-184 execution environment and API validation layer, effectively standardizing runtime behavior across devices for 90% of the Java video games at the time. It is implied that the JSR-184 format corresponds to “Micro3D v2” within the 2003-2005 mobile graphics evolution timeline.
@@ -40,18 +43,21 @@ M3G is not a loosely defined interchange format; it is a **strict runtime format
 ### ✨ Core Features
 
 - Binary `.m3g` export (JSR-184 compliant)
+- 22 JSR184 API Classes working directly in Blender and with Custom Property overrides
 - Verified against real M3G runtimes:
-  - M3G Viewer 0.3 (WizzWorks)
-  - M3G Viewer (HiCorp)
+  - M3G Viewer 0.3 (WizzWorks) / M3G Viewer (HiCorp)
 - Correct matrix layout (row-major, translation at indices 3 / 7 / 11)
 - Correct coordinate system (right-handed, Y-up, −Z forward)
 - Scene hierarchy export (World → Groups → Nodes)
-- Cameras (Perspective)
+- Cameras (Near / far planes, FOV, Perspective)
 - Lights (Ambient, Directional, Omni, Spot)
-- Materials (Ambient, Diffuse, Emissive, Specular)
+- Materials (Diffuse, Emissive, Specular, Alpha)
 - Vertex buffers, normals, triangle strips
-- Animation groundwork (object and skeletal foundations)
+- Rig Animation, Material/ Light/ Camera animation, Blendshape animation
+- Object Parenting animation (no skinning) for faster (segmented body rig) playback
+- ID Object tag, Action/NLA track ID tag with End frame to call from Java
 - Optional Java source export
+- Java templates (simple viewer, full D-pad model exploration)
 
 ---
 
