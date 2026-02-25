@@ -67,6 +67,24 @@ M3G is not a loosely defined interchange format; it is a **strict runtime format
 - Java templates (simple viewer, full D-pad model exploration)
 - Console verbose Full developer data export: ON (all technical specs) /OFF (Summary verbose)
 - Custom Properties must be written at OBJECT properties.
+- Sprite3D (billboard nodes from mesh+image, world-scale or pixel-size, crop rectangle, alpha factor, layer ordering)
+- Sprite3D crop animation (CROP target — sprite sheet flipbook playback via custom F-Curves)
+- MorphingMesh / Blend Shapes (shape key export with MORPH_WEIGHTS animation)
+- SkinnedMesh (32-bone Rigify support, vertex group skinning, 3 influences per vertex auto-limit)
+- Bone-parented rigid meshes (objects parented to bones, baked into bone-local space)
+- NLA multi-action export (multiple actions per armature, one AnimationController per action, Java weight-switching)
+- Quaternion sign normalization (w≥0 canonical hemisphere, prevents SLERP long-path artifacts)
+- Euler rotation mode per bone (reads pose_bone.rotation_mode — handles Rigify's YXZ shoulders)
+- Texture wrapping (REPEAT/CLAMP from Image Texture node extension property)
+- Power-of-two texture warnings
+- UserID tagging system (object #N and action #N parsers)
+- Hex color parser for custom properties (supports "FFE49E", "#FFE49E", legacy "r,g,b")
+- Camera FOV / near / far animation (new in v29)
+- Fog density / distance animation via foglight custom property F-Curves (new in v29)
+- Node alpha animation from BSDF Alpha input (new in v29)
+- Pickability animation from custom property F-Curves (new in v29)
+- Material animation — diffuse, ambient, emissive, specular, shininess all from BSDF F-Curves (new in v29)
+- Background Image2D from World shader Image Texture node (new in v29)
 
 ---
 
