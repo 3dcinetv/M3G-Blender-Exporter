@@ -38,7 +38,7 @@ M3G is not a loosely defined interchange format; it is a **strict runtime format
 
 ---
 
-## Supported Features
+## ⭐ Supported Features
 
 ### ✨ Core Features
 
@@ -53,10 +53,12 @@ M3G is not a loosely defined interchange format; it is a **strict runtime format
 - Cameras (Near / far planes, FOV, Perspective)
 - Lights (Ambient, Directional, Omni, Spot)
 - Materials (Diffuse, Roughness(_Shininess_), Specular, Emissive, Alpha)
+- BSDF Material options (Alpha clip, Alpha blend, Opaque) supported (_aka: Compositing Mode_)
+- Visibility animation from Blender (but must code it in .java to trigger)
 - Vertex buffers, normals, triangle strips
 - Rig Animation, Material/ Light/ Camera animation, Blendshape animation
 - Object Parenting animation (no skinning) for faster (segmented body rig) playback
-- ID Object tag, Action/NLA track ID tag with End frame to call from Java
+- ID Object tag, Action/NLA track ID tag with End frame to call animation controllers from Java
 - Optional Java source export
 - Java templates (simple viewer, full D-pad model exploration)
 - Console verbose Full developer data export: ON (all technical specs) /OFF (Summary verbose)
