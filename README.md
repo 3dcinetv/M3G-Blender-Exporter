@@ -49,21 +49,24 @@ M3G is not a loosely defined interchange format; it is a **strict runtime format
 - Correct matrix layout (row-major, translation at indices 3 / 7 / 11)
 - Correct coordinate system (right-handed, Y-up, −Z forward)
 - Scene hierarchy export (World → Groups → Nodes)
+- FOG (from near / far camera plane) / Mist world pass settings for Linear/Quadratic falloff
 - Cameras (Near / far planes, FOV, Perspective)
 - Lights (Ambient, Directional, Omni, Spot)
-- Materials (Diffuse, Emissive, Specular, Alpha)
+- Materials (Diffuse, Roughness(_Shininess_), Specular, Emissive, Alpha)
 - Vertex buffers, normals, triangle strips
 - Rig Animation, Material/ Light/ Camera animation, Blendshape animation
 - Object Parenting animation (no skinning) for faster (segmented body rig) playback
 - ID Object tag, Action/NLA track ID tag with End frame to call from Java
 - Optional Java source export
 - Java templates (simple viewer, full D-pad model exploration)
+- Console verbose Full developer data export: ON (all technical specs) /OFF (Summary verbose)
+- Custom Properties must be written at OBJECT properties.
 
 ---
 
 ## Technical Highlights
 
-This exporter explicitly implements the parts of JSR-184 that historically caused incompatibilities:
+This exporter explicitly implements the parts of JSR-184 that historically caused incompatibilities, but are now correctly resolved:
 
 - **Matrix layout:** M3G uses row-major matrices, not OpenGL-style column-major
 - **Axis conversion:** Blender Z-up → M3G Y-up via a global −90° X rotation
@@ -116,11 +119,54 @@ If it works in these, your file is ready for J2ME environment.
 
 ---
 
+## JSR184 ANIMATION
+
+This exporter supports JSR-184 animation from Blender in the following list:
+
+- ORIENTATION (268) — bone/node rotation via quaternion SLERP
+- TRANSLATION (275) — bone/node position
+- SCALE (270) — bone/node scale
+
+- MORPH_WEIGHTS (266) — blend shape weights
+- BONE rigs / Object parenting - Hierarchies with rotation
+
+- SPOT_ANGLE (273) — Spotlight cone animation.
+- SPOT_EXPONENT (274) — Spotlight falloff animation.
+
+- INTENSITY (265) — YES, light intensity is animatable. You could keyframe a light's energy in Blender and export it as an INTENSITY track.
+- COLOR (258) — Light color animation. Day/night cycle, alarm flashing, etc.
+- ALPHA (256) — Node alpha factor. Fade in/out effects on any node.
+
+- SHININESS (271) — Material shininess animation.
+- DIFFUSE_COLOR (261) — Material color animation.
+- EMISSIVE_COLOR (262) — Glow pulses.
+- AMBIENT_COLOR (257) — Material ambient animation.
+- SPECULAR_COLOR (272) — Specular animation.
+
+- FIELD_OF_VIEW (264) — Camera FOV animation. Zoom/dolly effects.
+- FAR_DISTANCE (263) — Fog/Camera far plane animation.
+- NEAR_DISTANCE (267) — Fog/Camera near plane animation.
+- DENSITY (260) — Fog density animation. Fog rolling in/out.
+
+- CROP (259) — Sprite3D crop rectangle animation (sprite sheet playback!).
+- VISIBILITY (276) — Show/hide toggle.
+- PICKABILITY (269) — Enable/disable touch detection.
+- Further animation implementations like physics / UV sliding / UI sprites / Impostors (trees / background planes), depend on Custom Properties and Java setup.
+
 ## Known Limitations
 
-This is a first public release. Some features are intentionally conservative.
+This is a first public release. Some features are intentionally conservative.  This repo will be updated constantly.
 
+- Texture correction must be enabled. Two facing triangles without perspective correction warp the UV coordinates.
+- M3G has a vertex limit of 65,535 tris.
+- GLES vertex shading method limitation
+- No normal calculation in blendshapes (_but could be implemented for post 2007 phones_)
+- Export a character with armature modifier (MeshSkin) with 2 vertex weights' per bone influence maximum
+- Textures are required to be in a square of 2 (16x16..., 24, 32, 64, 128, 256x256 pixels max).
+- Always target the END resolution of your device's screen with your camera. Your scene in Java renders from camera (176x220)
+- You cannot export a mesh with SkinDeform (weights) and Blendshapes. It's either one or the other. If the exporter finds such case, it will prioritize the SkinDeform (weights) Armature deformation.
 - Materials require at least one Light to be visible (JSR-184 behavior)
+- If you code your objects, make sure you are using CCW triangle strip arrays and feeding a normal array for surface shading (GL shading)
 - ~~Textures and UVs are under active development~~ Done
 - ~~Vertex colors supported but not yet default~~ Done
 - ~~Shape keys / MorphingMesh planned, not complete~~ Completed
@@ -148,8 +194,8 @@ All limitations are documented in code and tracked for future releases.
 ---
 
 ## Roadmap
-THIS ADDON IS STILL IN DEVELOPMENT.
-THIS REPO IS 17 versions BEHIND MY LOCAL DEVELOPMENT.
+THIS ADDON IS CONSTANTLY IN DEVELOPMENT.
+THIS REPO IS 3 versions BEHIND MY LOCAL DEVELOPMENT.
 
 Planned next steps:
 
