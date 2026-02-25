@@ -56,6 +56,8 @@ M3G is not a loosely defined interchange format; it is a **strict runtime format
 - ambientLight / foglight <---hardcoded names, can have custom properties to override scene's Ambient and Fog Light
 - Materials (Diffuse, Roughness(_Shininess_), Specular, Emissive, Alpha) correct translation from BSDF node
 - BSDF Material options (Alpha clip, Alpha blend, Opaque) supported (_aka: Compositing Mode_)
+- Vertex Color support. If a texture exists, it multiplies against the texture (use a grayscale/b-w texture for correct color variation)
+- Vertex color default attribute is "col" <--this is hard-coded to comply with Blender's default Vertex color name attribute property.
 - Visibility animation from Blender (but must code it in .java to trigger)
 - Vertex buffers, normals, triangle strips
 - Rig Animation, Material/ Light/ Camera animation, Blendshape animation
