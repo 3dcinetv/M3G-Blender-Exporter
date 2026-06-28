@@ -1,6 +1,6 @@
 
-# 🟢THE FULL ADDON IS AVAILABLE ON PATREON.COM/3DCINETV NOW #
-## ⚠ _THE CURRENT REPO WILL BE UPDATED WITH THE FULL ADDON AFTER MARCH 15th_ ##
+# 🟢BLENDER 3.6 M3G exporter FULL API compliant  #
+## ⚠ _The updated addon was completed with TOP industry developers, this is not a casual update. This is a fully rewritten addon_ ##
 
 # JSR-184 M3G Format
 ## Brief Evolution History (2003–2009)
