@@ -20,7 +20,7 @@ M3G 2.0 was proposed as the successor to the JSR-184 Mobile 3D Graphics (M3G) 1.
 Despite its technical advancements, M3G 2.0 was never widely implemented. Its development coincided with a fundamental shift in the mobile graphics ecosystem. The decline of Nokia, the primary commercial advocate of Java ME technologies, significantly reduced industry support for the platform. Simultaneously, advances in mobile GPU hardware enabled device manufacturers to expose lower-level graphics interfaces directly to Java ME applications, diminishing the need for a high-level abstraction layer such as M3G. The introduction of Apple's iPhone further accelerated this transition by establishing a native application ecosystem that excluded Java, contributing to the rapid decline of Java ME as a mainstream mobile platform. Collectively, these market and technological changes prevented the M3G 2.0 specification from progressing beyond the proposal stage and resulted in the absence of commercial implementations._(1)_
 
 
-_(1 Note by Mark Callow - HiCorp developer at the time)_
+_(1) Note by Mark Callow - HiCorp developer at the time)_
 
 [Official Java Community Process page for JSR-184 Mobile 3D Graphics API](https://jcp.org/en/jsr/detail?id=184)  
 📘 [Official JSR-184 Mobile 3D Graphics API documentation](https://nikita36078.github.io/J2ME_Docs/docs/jsr184/)  
