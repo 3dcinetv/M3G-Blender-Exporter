@@ -30,6 +30,9 @@ _(1) Note by Mark Callow - HiCorp developer at the time)_
 ![M3G Export Preview](Screenshots/M3G_Export_Preview.png)
 *Preview of a `.m3g` file exported from Blender and rendered in a real M3G viewer.*
 
+![M3G Rig Preview](Screenshots/fullyrigged_croc.png)
+*Preview of 2 NLA track animations of an arbitrary rig in Blender exported in `.m3g` -Notice the Animation track nodes in the viewer.*
+
 ## Overview
 
 This add-on was developed to reestablish a missing production link between modern 3D authoring tools and the JSR-184 (`.m3g`) mobile 3D runtime format, enabling Blender to function as a precise authoring environment for legacy and preservation-oriented mobile graphics pipelines. It is intended for developers, retro modders, and 3D technical artists who require direct control over scene graphs, transforms, materials, and binary layout when targeting Java ME–based runtimes, emulators, and historical toolchains. The exporter follows a clean separation of concerns and respects JSR-184 object graph semantics instead of attempting to force Blender abstractions into the format, avoiding the historically common failure modes that rendered most earlier M3G exporters unusable in real runtimes.  
