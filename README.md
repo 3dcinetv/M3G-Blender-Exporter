@@ -37,6 +37,8 @@ _(1) Note by Mark Callow - HiCorp developer at the time)_
 
 This add-on was developed to reestablish a missing production link between modern 3D authoring tools and the JSR-184 (`.m3g`) mobile 3D runtime format, enabling Blender to function as a precise authoring environment for legacy and preservation-oriented mobile graphics pipelines. It is intended for developers, retro modders, and 3D technical artists who require direct control over scene graphs, transforms, materials, and binary layout when targeting Java ME–based runtimes, emulators, and historical toolchains. The exporter follows a clean separation of concerns and respects JSR-184 object graph semantics instead of attempting to force Blender abstractions into the format, avoiding the historically common failure modes that rendered most earlier M3G exporters unusable in real runtimes.  
 
+We are focusing on developing this M3G add-on for Blender to restore retro-game developers a way to create 3D Java-based games. To keep the M3G legacy format open source (_as declared by Nokia Foundation in 2012_), and to give faster access to phones that still use Java in their devices (_2026 Nokia consumer phones like the 3310 5G_)
+
 Artistically, it treats early mobile 3D constraints—limited lighting models, strict resource budgets, and simplified scene semantics—as intentional design parameters rather than limitations, enabling accurate reconstruction and extension of mobile-era 3D content. For more details on the differences between .M3G version _1.0 and 1.1_, please scroll to the end of this page.
 
 ---
