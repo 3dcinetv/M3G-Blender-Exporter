@@ -26,6 +26,7 @@ _(1) Note by Mark Callow - HiCorp developer at the time)_
 📘 [Official JSR-184 Mobile 3D Graphics API documentation](https://nikita36078.github.io/J2ME_Docs/docs/jsr184/)  
 [JSR-184 byte layout and ObjectType ID structure](https://www.j2megame.org/j2meapi/JSR_184_Mobile_3D_Graphics_API_1_1/file-format.html#Fog)  
 🎮 [3D/J2ME Video Game examples](https://youtu.be/bMm_wB7fJXk?si=xWzr94dA7wxjulIq)  
+[👁‍🗨M3G Viewer by WizzWorks](https://archive.org/details/M3G-Tools) 
 
 ![M3G Export Preview](Screenshots/M3G_Export_Preview.png)
 *Preview of a `.m3g` file exported from Blender and rendered in a real M3G viewer.*
